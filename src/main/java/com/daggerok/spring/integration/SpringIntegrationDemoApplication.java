@@ -39,9 +39,7 @@ public class SpringIntegrationDemoApplication extends IntegrationFlowAdapter {
                             .put("value", line[1])
                             .get();
                 })
-                .handle(i -> {
-                    System.out.println(i.getPayload());
-                });
+                .handle(i -> System.out.println(i.getPayload()));
     }
 
     private Date next(TriggerContext triggerContext) {
