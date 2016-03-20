@@ -4,7 +4,7 @@ buildscript {
         springIntegrationDslVersion = '1.1.2.RELEASE'
         springIntegrationVersion = '4.2.5.RELEASE'
         version = '1.0.0'
-        gradleVersion = '2.11'
+        gradleVersion = '2.12'
     }
     repositories { jcenter() }
     dependencies { classpath("org.springframework.boot:spring-boot-gradle-plugin:$springBootVersion") }
