@@ -1,46 +1,43 @@
 buildscript {
     ext {
-        springBootVersion = '1.3.3.RELEASE'
-        springIntegrationDslVersion = '1.1.2.RELEASE'
-        springIntegrationVersion = '4.2.5.RELEASE'
-        version = '1.0.0'
-        gradleVersion = '2.12'
+        springBootVersion = "1.5.10.RELEASE"
+        springIntegrationDslVersion = "1.1.2.RELEASE"
+        springIntegrationVersion = "4.2.5.RELEASE"
+        gradleVersion = "4.6-rc-2"
     }
     repositories { jcenter() }
     dependencies { classpath("org.springframework.boot:spring-boot-gradle-plugin:$springBootVersion") }
 }
 
-apply plugin: 'java'
-apply plugin: 'eclipse'
-apply plugin: 'spring-boot'
+apply plugin: "java"
+apply plugin: "eclipse"
+apply plugin: "org.springframework.boot"
 
-jar {
-    baseName = 'integration'
-    version = version
-}
+group = "daggerok"
+version = "2.0.0"
 
 targetCompatibility = sourceCompatibility = 1.8
 
 repositories { jcenter() }
 
 dependencies {
-    compile 'org.springframework.boot:spring-boot-devtools',
-            'org.springframework.boot:spring-boot-starter-integration',
+    compile "org.springframework.boot:spring-boot-devtools",
+            "org.springframework.boot:spring-boot-starter-integration",
             "org.springframework.integration:spring-integration-core:$springIntegrationVersion",
             "org.springframework.integration:spring-integration-file:$springIntegrationVersion",
             "org.springframework.integration:spring-integration-java-dsl:$springIntegrationDslVersion"
 
-    testCompile 'org.springframework.boot:spring-boot-starter-test',
+    testCompile "org.springframework.boot:spring-boot-starter-test",
             "org.springframework.integration:spring-integration-test:$springIntegrationVersion"
 }
 
 eclipse {
     classpath {
-        containers.remove('org.eclipse.jdt.launching.JRE_CONTAINER')
-        containers 'org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8'
+        containers.remove("org.eclipse.jdt.launching.JRE_CONTAINER")
+        containers "org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"
     }
 }
 
-task wrapper(type: Wrapper) { gradleVersion = gradleVersion }
+task wrapper(type: Wrapper) { gradleVersion = project.gradleVersion }
 
 defaultTasks "clean", "build"
