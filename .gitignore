@@ -1,8 +1,10 @@
 .gradle/
-gradle*
+target/
 build/
 out/
-.DS_Store
+.idea/
 *.iml
 *.ipr
 *.iws
+*.log*
+.DS_Store
