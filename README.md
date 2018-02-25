@@ -3,6 +3,6 @@ spring-integration-java-DSL-example [![Build Status](https://travis-ci.org/dagge
 
 spring integration java DSL file processing: read, transform lines to key-value and print to stdout
 
-```sh
-gradle clean bootRun
+```bash
+./gradlew clean bootRun
 ```
