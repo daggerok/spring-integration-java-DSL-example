@@ -6,3 +6,5 @@ spring integration java DSL file processing: read, transform lines to key-value 
 ```bash
 ./gradlew clean bootRun
 ```
+
+see this! link:https://github.com/daggerok/spring-cloud-function-stream-integration[spring-cloud-function and spring-cloud-stream integration]
