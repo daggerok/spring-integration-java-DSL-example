@@ -7,4 +7,7 @@ spring integration java DSL file processing: read, transform lines to key-value 
 ./gradlew clean bootRun
 ```
 
-see this! link:https://github.com/daggerok/spring-cloud-function-stream-integration[spring-cloud-function and spring-cloud-stream integration]
+## other repos
+* [GitHub: daggerok/spring-integration-kotlin-dsl](https://github.com/daggerok/spring-integration-kotlin-dsl)
+* [GitHub: daggerok/spring-integration-5-examples](https://github.com/daggerok/spring-integration-5-examples)
+* [spring-cloud-function and spring-cloud-stream integration](https://github.com/daggerok/spring-cloud-function-stream-integration)
